@@ -25,14 +25,10 @@ raw_joke = requests.get(joke_url).content.decode('utf8')
 joke = json.loads(raw_joke)
 joke_text = joke['value']['joke']
 
-
 #Runs with Headless enabled
 chrome_options = Options()  
 chrome_options.add_argument("--headless")  
 driver = webdriver.Chrome(chrome_options=chrome_options)
-
-#Uncomment line 34, and comment line 31 to run in windowed mode
-#driver = webdriver.Chrome()
 
 #Opens Login Page
 driver.get("https://"+slackname+".slack.com/")
@@ -56,4 +52,4 @@ actions.send_keys('*Jokebot:* '+joke_text+'\n')
 actions.perform()
 
 time.sleep(1) #Pauses 1 second to be sure its finished
-driver.quit() #Closes the window
+driver.quit() #Closes the chrome session
