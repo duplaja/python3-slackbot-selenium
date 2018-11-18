@@ -8,4 +8,4 @@ Python3 quasi-slackbot written in Selenium. Meant to be run with cron if you don
 * selenium (grab via `pip3 install selenium`)
 
 ## Ideas
-This is just a framework. Feel free to replace the "jokes" portion with content of your choice, from an API, scrape, etc.
+This is just a framework. Feel free to replace the "jokes" portion with content of your choice, from an API, scrape, etc. If you come up with something cool, share it!
